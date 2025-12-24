@@ -1,0 +1,919 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prime Rib Dinner Cookbook - 5 PM Dinner</title>
+    <meta name="description" content="Complete guide for cooking a 4.44 kg bone-in prime rib for 8 people with garlic mashed potatoes and horseradish cream, timed for 5 PM dinner service.">
+    <style>
+        :root {
+            --color-white: rgba(255, 255, 255, 1);
+            --color-cream-50: rgba(252, 252, 249, 1);
+            --color-cream-100: rgba(255, 255, 253, 1);
+            --color-gray-200: rgba(245, 245, 245, 1);
+            --color-gray-300: rgba(167, 169, 169, 1);
+            --color-gray-400: rgba(119, 124, 124, 1);
+            --color-slate-500: rgba(98, 108, 113, 1);
+            --color-brown-600: rgba(94, 82, 64, 1);
+            --color-charcoal-700: rgba(31, 33, 33, 1);
+            --color-charcoal-800: rgba(38, 40, 40, 1);
+            --color-slate-900: rgba(19, 52, 59, 1);
+            --color-teal-300: rgba(50, 184, 198, 1);
+            --color-teal-400: rgba(45, 166, 178, 1);
+            --color-teal-500: rgba(33, 128, 141, 1);
+            --color-teal-600: rgba(29, 116, 128, 1);
+            --color-teal-700: rgba(26, 104, 115, 1);
+            --color-red-400: rgba(255, 84, 89, 1);
+            --color-red-500: rgba(192, 21, 47, 1);
+            --color-orange-400: rgba(230, 129, 97, 1);
+            --color-orange-500: rgba(168, 75, 47, 1);
+
+            --color-background: var(--color-cream-50);
+            --color-surface: var(--color-cream-100);
+            --color-text: var(--color-slate-900);
+            --color-text-secondary: var(--color-slate-500);
+            --color-primary: var(--color-teal-500);
+            --color-primary-hover: var(--color-teal-600);
+            --color-primary-active: var(--color-teal-700);
+            --color-secondary: rgba(94, 82, 64, 0.12);
+            --color-secondary-hover: rgba(94, 82, 64, 0.2);
+            --color-secondary-active: rgba(94, 82, 64, 0.25);
+            --color-border: rgba(94, 82, 64, 0.2);
+            --color-btn-primary-text: var(--color-cream-50);
+            --color-card-border: rgba(94, 82, 64, 0.12);
+            --color-error: var(--color-red-500);
+            --color-success: var(--color-teal-500);
+
+            --font-family-base: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            --font-size-base: 14px;
+            --font-size-sm: 12px;
+            --font-size-md: 14px;
+            --font-size-lg: 16px;
+            --font-size-xl: 18px;
+            --font-size-2xl: 20px;
+            --font-size-3xl: 24px;
+            --font-weight-medium: 500;
+            --font-weight-semibold: 550;
+            --font-weight-bold: 600;
+
+            --space-4: 4px;
+            --space-6: 6px;
+            --space-8: 8px;
+            --space-12: 12px;
+            --space-16: 16px;
+            --space-20: 20px;
+            --space-24: 24px;
+            --space-32: 32px;
+
+            --radius-sm: 6px;
+            --radius-base: 8px;
+            --radius-md: 10px;
+            --radius-lg: 12px;
+
+            --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.04), 0 1px 2px rgba(0, 0, 0, 0.02);
+            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.04), 0 2px 4px -1px rgba(0, 0, 0, 0.02);
+
+            --duration-normal: 250ms;
+            --ease-standard: cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            font-size: var(--font-size-base);
+            font-family: var(--font-family-base);
+            line-height: 1.5;
+            color: var(--color-text);
+            background-color: var(--color-background);
+            -webkit-font-smoothing: antialiased;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            margin: 0;
+            font-weight: var(--font-weight-semibold);
+            line-height: 1.2;
+            color: var(--color-text);
+        }
+
+        h1 { font-size: var(--font-size-3xl); }
+        h2 { font-size: var(--font-size-2xl); }
+        h3 { font-size: var(--font-size-xl); }
+
+        p {
+            margin: 0 0 var(--space-16) 0;
+        }
+
+        a {
+            color: var(--color-primary);
+            text-decoration: none;
+            transition: color var(--duration-normal) var(--ease-standard);
+        }
+
+        a:hover {
+            color: var(--color-primary-hover);
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: var(--space-16);
+        }
+
+        .header {
+            background: linear-gradient(135deg, var(--color-teal-500) 0%, var(--color-teal-600) 100%);
+            color: white;
+            padding: var(--space-32) var(--space-16);
+            text-align: center;
+            margin-bottom: var(--space-32);
+            border-radius: var(--radius-lg);
+        }
+
+        .header h1 {
+            color: white;
+            margin: 0 0 var(--space-8) 0;
+        }
+
+        .header p {
+            margin: 0;
+            opacity: 0.95;
+            font-size: var(--font-size-lg);
+        }
+
+        .tabs {
+            display: flex;
+            gap: var(--space-8);
+            margin-bottom: var(--space-24);
+            border-bottom: 2px solid var(--color-border);
+            overflow-x: auto;
+        }
+
+        .tab-btn {
+            padding: var(--space-12) var(--space-20);
+            background: none;
+            border: none;
+            border-bottom: 3px solid transparent;
+            color: var(--color-text-secondary);
+            cursor: pointer;
+            font-size: var(--font-size-base);
+            font-weight: var(--font-weight-medium);
+            transition: all var(--duration-normal) var(--ease-standard);
+            white-space: nowrap;
+        }
+
+        .tab-btn:hover {
+            color: var(--color-text);
+        }
+
+        .tab-btn.active {
+            color: var(--color-primary);
+            border-bottom-color: var(--color-primary);
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        .card {
+            background-color: var(--color-surface);
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--color-card-border);
+            box-shadow: var(--shadow-sm);
+            padding: var(--space-20);
+            margin-bottom: var(--space-20);
+        }
+
+        .card h3 {
+            margin-top: 0;
+            margin-bottom: var(--space-12);
+        }
+
+        .ingredients-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--space-20);
+        }
+
+        .ingredient-card {
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius-base);
+            padding: var(--space-16);
+            background-color: rgba(94, 82, 64, 0.03);
+        }
+
+        .ingredient-card h4 {
+            margin: 0 0 var(--space-12) 0;
+            color: var(--color-primary);
+        }
+
+        .ingredient-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: var(--space-12);
+            padding: var(--space-8) 0;
+            border-bottom: 1px solid rgba(94, 82, 64, 0.1);
+        }
+
+        .ingredient-item:last-child {
+            border-bottom: none;
+        }
+
+        .ingredient-checkbox {
+            width: 18px;
+            height: 18px;
+            margin-right: var(--space-12);
+            margin-top: 2px;
+            cursor: pointer;
+            flex-shrink: 0;
+        }
+
+        .ingredient-text {
+            flex: 1;
+        }
+
+        .ingredient-text.checked {
+            opacity: 0.6;
+            text-decoration: line-through;
+        }
+
+        .timeline {
+            position: relative;
+            padding: var(--space-20) 0;
+        }
+
+        .timeline-item {
+            display: flex;
+            gap: var(--space-16);
+            margin-bottom: var(--space-24);
+            padding: var(--space-16);
+            background-color: rgba(33, 128, 141, 0.05);
+            border-radius: var(--radius-base);
+            border-left: 4px solid var(--color-primary);
+        }
+
+        .timeline-time {
+            font-weight: var(--font-weight-bold);
+            color: var(--color-primary);
+            min-width: 80px;
+            font-size: var(--font-size-lg);
+        }
+
+        .timeline-content {
+            flex: 1;
+        }
+
+        .timeline-content h4 {
+            margin: 0 0 var(--space-8) 0;
+        }
+
+        .timeline-content p {
+            margin: var(--space-8) 0 0 0;
+            color: var(--color-text-secondary);
+            font-size: var(--font-size-sm);
+        }
+
+        .checklist {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .checklist li {
+            display: flex;
+            align-items: flex-start;
+            padding: var(--space-12);
+            margin-bottom: var(--space-8);
+            background-color: rgba(33, 128, 141, 0.05);
+            border-radius: var(--radius-sm);
+        }
+
+        .checklist input[type="checkbox"] {
+            width: 18px;
+            height: 18px;
+            margin-right: var(--space-12);
+            margin-top: 2px;
+            cursor: pointer;
+            flex-shrink: 0;
+        }
+
+        .checklist label {
+            cursor: pointer;
+            flex: 1;
+            display: flex;
+            align-items: center;
+        }
+
+        .checklist input[type="checkbox"]:checked + label {
+            opacity: 0.6;
+            text-decoration: line-through;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: var(--space-8) var(--space-16);
+            border-radius: var(--radius-base);
+            font-size: var(--font-size-base);
+            font-weight: 500;
+            cursor: pointer;
+            transition: all var(--duration-normal) var(--ease-standard);
+            border: none;
+            text-decoration: none;
+        }
+
+        .btn--primary {
+            background: var(--color-primary);
+            color: var(--color-btn-primary-text);
+        }
+
+        .btn--primary:hover {
+            background: var(--color-primary-hover);
+        }
+
+        .btn--secondary {
+            background: var(--color-secondary);
+            color: var(--color-text);
+        }
+
+        .btn--secondary:hover {
+            background: var(--color-secondary-hover);
+        }
+
+        .specs {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: var(--space-16);
+            margin-bottom: var(--space-24);
+        }
+
+        .spec-box {
+            background-color: rgba(33, 128, 141, 0.1);
+            padding: var(--space-16);
+            border-radius: var(--radius-base);
+            text-align: center;
+            border: 1px solid rgba(33, 128, 141, 0.2);
+        }
+
+        .spec-label {
+            font-size: var(--font-size-sm);
+            color: var(--color-text-secondary);
+            margin-bottom: var(--space-8);
+        }
+
+        .spec-value {
+            font-size: var(--font-size-2xl);
+            font-weight: var(--font-weight-bold);
+            color: var(--color-primary);
+        }
+
+        .notes-section {
+            background-color: rgba(230, 129, 97, 0.08);
+            padding: var(--space-16);
+            border-radius: var(--radius-base);
+            border-left: 4px solid var(--color-orange-500);
+            margin-top: var(--space-20);
+        }
+
+        .notes-section h4 {
+            margin-top: 0;
+            color: var(--color-orange-500);
+        }
+
+        .footer {
+            text-align: center;
+            padding: var(--space-24) var(--space-16);
+            margin-top: var(--space-32);
+            border-top: 1px solid var(--color-border);
+            color: var(--color-text-secondary);
+            font-size: var(--font-size-sm);
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: var(--space-12);
+            }
+
+            .header {
+                padding: var(--space-20) var(--space-16);
+            }
+
+            .ingredients-list {
+                grid-template-columns: 1fr;
+            }
+
+            .tabs {
+                gap: var(--space-4);
+            }
+
+            .tab-btn {
+                padding: var(--space-8) var(--space-12);
+                font-size: var(--font-size-sm);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🍖 Prime Rib Dinner Cookbook</h1>
+            <p>Complete guide for 8 people | 4.44 kg bone-in roast</p>
+        </div>
+
+        <div class="tabs">
+            <button class="tab-btn active" onclick="switchTab('overview')">Overview</button>
+            <button class="tab-btn" onclick="switchTab('ingredients')">Ingredients</button>
+            <button class="tab-btn" onclick="switchTab('timeline')">Timeline</button>
+            <button class="tab-btn" onclick="switchTab('cooking')">Cooking</button>
+            <button class="tab-btn" onclick="switchTab('sides')">Sides</button>
+        </div>
+
+        <!-- OVERVIEW TAB -->
+        <div id="overview" class="tab-content active">
+            <div class="specs">
+                <div class="spec-box">
+                    <div class="spec-label">Prime Rib Size</div>
+                    <div class="spec-value">4.44 kg</div>
+                </div>
+                <div class="spec-box">
+                    <div class="spec-label">Serves</div>
+                    <div class="spec-value">8</div>
+                </div>
+                <div class="spec-box">
+                    <div class="spec-label">Salt Needed</div>
+                    <div class="spec-value">19-20 g</div>
+                </div>
+                <div class="spec-box">
+                    <div class="spec-label">Cooking Method</div>
+                    <div class="spec-value">Reverse Sear</div>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>Method Overview</h3>
+                <p>This recipe uses the <strong>reverse sear technique</strong> for perfectly even cooking:</p>
+                <ol style="margin: 0; padding-left: var(--space-20);">
+                    <li>Dry-brine 24-48 hours uncovered in the fridge</li>
+                    <li>Slow roast at 250°F until core reaches 118°F</li>
+                    <li>Rest 30-90 minutes while oven preheats</li>
+                    <li>Sear at 500°F for 10-15 minutes for crust</li>
+                    <li>Rest 20-30 minutes, then carve and serve</li>
+                </ol>
+            </div>
+
+            <div class="card">
+                <h3>Equipment Needed</h3>
+                <ul style="margin: 0; padding-left: var(--space-20);">
+                    <li>Probe meat thermometer (essential)</li>
+                    <li>Wire rack for roasting pan</li>
+                    <li>Deep roasting pan</li>
+                    <li>Sharp carving knife</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- INGREDIENTS TAB -->
+        <div id="ingredients" class="tab-content">
+            <div class="ingredients-list">
+                <!-- Prime Rib -->
+                <div class="ingredient-card">
+                    <h4>Prime Rib (4.44 kg)</h4>
+                    <div class="ingredient-item">
+                        <input type="checkbox" class="ingredient-checkbox" onchange="toggleStrike(this)">
+                        <span class="ingredient-text">Bone-in prime rib, 4.44 kg</span>
+                    </div>
+                    <div class="ingredient-item">
+                        <input type="checkbox" class="ingredient-checkbox" onchange="toggleStrike(this)">
+                        <span class="ingredient-text">Flaky sea salt, 6-7 tsp (19-20g)</span>
+                    </div>
+                    <div class="ingredient-item">
+                        <input type="checkbox" class="ingredient-checkbox" onchange="toggleStrike(this)">
+                        <span class="ingredient-text">Black pepper, freshly ground, 2 tsp</span>
+                    </div>
+                    <div class="ingredient-item">
+                        <input type="checkbox" class="ingredient-checkbox" onchange="toggleStrike(this)">
+                        <span class="ingredient-text">Fresh rosemary, 2 sprigs (finely chopped)</span>
+                    </div>
+                    <div class="ingredient-item">
+                        <input type="checkbox" class="ingredient-checkbox" onchange="toggleStrike(this)">
+                        <span class="ingredient-text">Fresh thyme, 1 tbsp</span>
+                    </div>
+                    <div class="ingredient-item">
+                        <input type="checkbox" class="ingredient-checkbox" onchange="toggleStrike(this)">
+                        <span class="ingredient-text">Garlic, 3 large cloves (finely chopped)</span>
+                    </div>
+                    <div class="ingredient-item">
+                        <input type="checkbox" class="ingredient-checkbox" onchange="toggleStrike(this)">
+                        <span class="ingredient-text">Whole-grain mustard, 1 tbsp</span>
+                    </div>
+                    <div class="ingredient-item">
+                        <input type="checkbox" class="ingredient-checkbox" onchange="toggleStrike(this)">
+                        <span class="ingredient-text">Olive oil, 4 tbsp</span>
+                    </div>
+                </div>
+
+                <!-- Aromatic Bed -->
+                <div class="ingredient-card">
+                    <h4>Aromatic Bed</h4>
+                    <div class="ingredient-item">
+                        <input type="checkbox" class="ingredient-checkbox" onchange="toggleStrike(this)">
+                        <span class="ingredient-text">Fresh rosemary, 8 sprigs</span>
+                    </div>
+                    <div class="ingredient-item">
+                        <input type="checkbox" class="ingredient-checkbox" onchange="toggleStrike(this)">
+                        <span class="ingredient-text">Fresh thyme, 1 large bunch</span>
+                    </div>
+                    <div class="ingredient-item">
+                        <input type="checkbox" class="ingredient-checkbox" onchange="toggleStrike(this)">
+                        <span class="ingredient-text">Bay leaves, 5</span>
+                    </div>
+                    <div class="ingredient-item">
+                        <input type="checkbox" class="ingredient-checkbox" onchange="toggleStrike(this)">
+                        <span class="ingredient-text">Garlic bulbs, 2 (halved)</span>
+                    </div>
+                    <div class="ingredient-item">
+                        <input type="checkbox" class="ingredient-checkbox" onchange="toggleStrike(this)">
+                        <span class="ingredient-text">Lemon zest, 2-3 strips</span>
+                    </div>
+                    <div class="ingredient-item">
+                        <input type="checkbox" class="ingredient-checkbox" onchange="toggleStrike(this)">
+                        <span class="ingredient-text">Olive oil, light drizzle</span>
+                    </div>
+                </div>
+
+                <!-- Pan Jus -->
+                <div class="ingredient-card">
+                    <h4>Pan Jus</h4>
+                    <div class="ingredient-item">
+                        <input type="checkbox" class="ingredient-checkbox" onchange="toggleStrike(this)">
+                        <span class="ingredient-text">Beef stock, 1 cup</span>
+                    </div>
+                    <div class="ingredient-item">
+                        <input type="checkbox" class="ingredient-checkbox" onchange="toggleStrike(this)">
+                        <span class="ingredient-text">Red wine, splash (optional)</span>
+                    </div>
+                    <div class="ingredient-item">
+                        <input type="checkbox" class="ingredient-checkbox" onchange="toggleStrike(this)">
+                        <span class="ingredient-text">Salt & pepper to taste</span>
+                    </div>
+                </div>
+
+                <!-- Horseradish Cream -->
+                <div class="ingredient-card">
+                    <h4>Horseradish Cream</h4>
+                    <div class="ingredient-item">
+                        <input type="checkbox" class="ingredient-checkbox" onchange="toggleStrike(this)">
+                        <span class="ingredient-text">Sour cream, 1 cup</span>
+                    </div>
+                    <div class="ingredient-item">
+                        <input type="checkbox" class="ingredient-checkbox" onchange="toggleStrike(this)">
+                        <span class="ingredient-text">Prepared horseradish, 3-4 tbsp</span>
+                    </div>
+                    <div class="ingredient-item">
+                        <input type="checkbox" class="ingredient-checkbox" onchange="toggleStrike(this)">
+                        <span class="ingredient-text">Dijon mustard, 1 tsp</span>
+                    </div>
+                    <div class="ingredient-item">
+                        <input type="checkbox" class="ingredient-checkbox" onchange="toggleStrike(this)">
+                        <span class="ingredient-text">Lemon juice, 1-2 tsp</span>
+                    </div>
+                    <div class="ingredient-item">
+                        <input type="checkbox" class="ingredient-checkbox" onchange="toggleStrike(this)">
+                        <span class="ingredient-text">Salt & pepper to taste</span>
+                    </div>
+                </div>
+
+                <!-- Garlic Mash -->
+                <div class="ingredient-card">
+                    <h4>Garlic Mashed Potatoes</h4>
+                    <div class="ingredient-item">
+                        <input type="checkbox" class="ingredient-checkbox" onchange="toggleStrike(this)">
+                        <span class="ingredient-text">Yukon Gold potatoes, 1.8 kg</span>
+                    </div>
+                    <div class="ingredient-item">
+                        <input type="checkbox" class="ingredient-checkbox" onchange="toggleStrike(this)">
+                        <span class="ingredient-text">Unsalted butter, 8-10 tbsp</span>
+                    </div>
+                    <div class="ingredient-item">
+                        <input type="checkbox" class="ingredient-checkbox" onchange="toggleStrike(this)">
+                        <span class="ingredient-text">Heavy cream, 1 cup (warmed)</span>
+                    </div>
+                    <div class="ingredient-item">
+                        <input type="checkbox" class="ingredient-checkbox" onchange="toggleStrike(this)">
+                        <span class="ingredient-text">Garlic cloves, 6-8 (smashed)</span>
+                    </div>
+                    <div class="ingredient-item">
+                        <input type="checkbox" class="ingredient-checkbox" onchange="toggleStrike(this)">
+                        <span class="ingredient-text">Sour cream or crème fraîche, ¼ cup</span>
+                    </div>
+                    <div class="ingredient-item">
+                        <input type="checkbox" class="ingredient-checkbox" onchange="toggleStrike(this)">
+                        <span class="ingredient-text">Kosher salt, 2-2.5 tsp</span>
+                    </div>
+                    <div class="ingredient-item">
+                        <input type="checkbox" class="ingredient-checkbox" onchange="toggleStrike(this)">
+                        <span class="ingredient-text">Black pepper, ½ tsp</span>
+                    </div>
+                    <div class="ingredient-item">
+                        <input type="checkbox" class="ingredient-checkbox" onchange="toggleStrike(this)">
+                        <span class="ingredient-text">Fresh chives, 2-3 tbsp (optional)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- TIMELINE TAB -->
+        <div id="timeline" class="tab-content">
+            <div class="card">
+                <h3>Complete Cook Schedule</h3>
+                <p style="color: var(--color-text-secondary); margin-bottom: var(--space-20);">Plan your dinner time and work backwards. Timeline shown for 6:00 PM dinner.</p>
+
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-time">Day 1</div>
+                        <div class="timeline-content">
+                            <h4>Dry-Brine Prime Rib</h4>
+                            <p>Pat roast dry, trim excess hard fat, apply flaky salt (6-7 tsp), place on rack uncovered in fridge</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-time">2:00 PM</div>
+                        <div class="timeline-content">
+                            <h4>Prep & Remove from Fridge</h4>
+                            <p>Take roast out of fridge to reach room temperature (2-3 hours before roasting)</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-time">3:30 PM</div>
+                        <div class="timeline-content">
+                            <h4>Prep Sides</h4>
+                            <p>Peel and cut potatoes for garlic mash. Prep horseradish cream sauce and refrigerate. Make pan jus ingredients ready.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-time">4:00 PM</div>
+                        <div class="timeline-content">
+                            <h4>Preheat Oven & Prep Roast</h4>
+                            <p>Preheat oven to 250°F (120°C). Arrange aromatic bed in roasting pan. Mix herb-mustard rub and apply to roast.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-time">4:15 PM</div>
+                        <div class="timeline-content">
+                            <h4>START SLOW ROAST</h4>
+                            <p><strong>Place roast on aromatic bed, insert probe thermometer. Target: 118°F (47°C) internal.</strong> Expect ~2.5-3.5 hours.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-time">5:00 PM</div>
+                        <div class="timeline-content">
+                            <h4>Start Potatoes</h4>
+                            <p>Boil salted water, add potato chunks. Cook until fork-tender (20-25 min). Warm cream and butter.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-time">6:45 PM</div>
+                        <div class="timeline-content">
+                            <h4>Check Roast Temperature</h4>
+                            <p>Roast should be approaching 118°F. Keep monitoring every 15-20 minutes.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-time">7:15-7:30 PM</div>
+                        <div class="timeline-content">
+                            <h4>Roast Reaches Target (118°F)</h4>
+                            <p>Remove from oven, tent loosely with foil. Start potatoes mashing step. Increase oven to 500°F (260°C).</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-time">7:45-8:00 PM</div>
+                        <div class="timeline-content">
+                            <h4>Sear: Into Hot Oven</h4>
+                            <p>Return roast to 500°F oven for 10-15 minutes until deeply browned.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-time">8:00 PM</div>
+                        <div class="timeline-content">
+                            <h4>Rest & Finish Sides</h4>
+                            <p>Remove roast, tent loosely. Rest 20-30 min. Finish mashing potatoes, make pan jus, plate horseradish cream.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-time">8:30 PM</div>
+                        <div class="timeline-content">
+                            <h4>CARVE & SERVE</h4>
+                            <p><strong>Remove bones, slice ½-¾ inch thick. Serve with pan jus and horseradish cream.</strong></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="notes-section">
+                <h4>⏰ Pro Tips</h4>
+                <ul style="margin: 0; padding-left: var(--space-20);">
+                    <li><strong>Start earlier:</strong> If your dinner is at 6 PM, begin the dry-brine the day before</li>
+                    <li><strong>Flexible rest:</strong> The 30-90 minute rest is flexible; roast can rest longer if needed</li>
+                    <li><strong>Parallel cooking:</strong> Start potatoes around 5 PM to time everything together</li>
+                    <li><strong>Temperature is everything:</strong> Use a reliable probe thermometer, not guesswork</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- COOKING TAB -->
+        <div id="cooking" class="tab-content">
+            <div class="card">
+                <h3>Prime Rib Step-by-Step</h3>
+                
+                <h4 style="margin-top: var(--space-24); color: var(--color-primary);">Step 1: Dry-Brine (24-48 Hours Ahead)</h4>
+                <ul style="padding-left: var(--space-20);">
+                    <li>Unwrap roast and pat very dry with paper towels</li>
+                    <li>Trim only thick, hard surface fat; keep soft fat cap</li>
+                    <li>Rub all over with 3 tbsp olive oil</li>
+                    <li>Apply 6-7 tsp flaky salt evenly, coating all sides</li>
+                    <li>Place on wire rack set over a tray, fat-side up</li>
+                    <li>Refrigerate uncovered for 24-48 hours</li>
+                </ul>
+
+                <h4 style="margin-top: var(--space-24); color: var(--color-primary);">Step 2: Roast Day Prep (2-3 Hours Before Cooking)</h4>
+                <ul style="padding-left: var(--space-20);">
+                    <li>Remove roast from fridge and let sit on counter (brings to room temp)</li>
+                    <li>Preheat oven to 250°F (120°C)</li>
+                    <li>In roasting pan, layer aromatic bed: rosemary, thyme, bay leaves, garlic halves, lemon zest. Drizzle with olive oil.</li>
+                    <li>Mix herb-mustard rub: 3 garlic cloves (minced), 2 rosemary sprigs (chopped), 1 tbsp whole-grain mustard, 4 tbsp olive oil</li>
+                    <li>Rub this mixture all over the roast surface</li>
+                </ul>
+
+                <h4 style="margin-top: var(--space-24); color: var(--color-primary);">Step 3: Slow Roast (250°F / 120°C)</h4>
+                <ul style="padding-left: var(--space-20);">
+                    <li>Place roast bone-side down on aromatic bed</li>
+                    <li>Insert probe thermometer into thickest part, avoiding bone</li>
+                    <li>Roast slowly until internal temp reaches <strong>118°F (47°C)</strong></li>
+                    <li>Expect 2.5-3.5 hours for a 4.44 kg roast</li>
+                    <li>Check temperature every 30 minutes after first 2 hours</li>
+                </ul>
+
+                <h4 style="margin-top: var(--space-24); color: var(--color-primary);">Step 4: First Rest & Oven Prep</h4>
+                <ul style="padding-left: var(--space-20);">
+                    <li>Remove roast from 250°F oven when it hits 118°F</li>
+                    <li>Tent loosely with foil</li>
+                    <li>Increase oven temperature to 500°F (260°C)</li>
+                    <li>Let roast rest on counter for 30-90 minutes while oven preheats</li>
+                </ul>
+
+                <h4 style="margin-top: var(--space-24); color: var(--color-primary);">Step 5: Sear Crust (500°F / 260°C)</h4>
+                <ul style="padding-left: var(--space-20);">
+                    <li>Return roast to hot 500°F oven</li>
+                    <li>Roast for 10-15 minutes until exterior is deeply browned and crispy</li>
+                    <li>Watch closely; don't exceed 15 minutes</li>
+                </ul>
+
+                <h4 style="margin-top: var(--space-24); color: var(--color-primary);">Step 6: Final Rest & Carving</h4>
+                <ul style="padding-left: var(--space-20);">
+                    <li>Remove from oven, tent loosely again</li>
+                    <li>Rest for 20-30 minutes (internal temp will rise 5-8°F)</li>
+                    <li>Stand roast on end, run long knife along bones to separate meat</li>
+                    <li>Slice ½-¾ inch thick across the grain</li>
+                    <li>Serve with pan jus spooned over</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h3>Pan Jus</h3>
+                <ol style="padding-left: var(--space-20);">
+                    <li>After roast is removed, place roasting pan on stovetop over medium heat</li>
+                    <li>Skim excess fat, leaving 2-3 tbsp of fat plus all browned bits</li>
+                    <li>Add 1 cup beef stock and optional splash of red wine</li>
+                    <li>Scrape up browned bits from pan bottom with wooden spoon</li>
+                    <li>Simmer 3-5 minutes until slightly reduced</li>
+                    <li>Season with salt and pepper to taste</li>
+                    <li>Strain if you prefer smooth jus; keep warm</li>
+                </ol>
+            </div>
+
+            <div class="card">
+                <h3>Horseradish Cream</h3>
+                <ol style="padding-left: var(--space-20);">
+                    <li>In a bowl, combine 1 cup sour cream, 3-4 tbsp prepared horseradish, 1 tsp Dijon mustard</li>
+                    <li>Add 1-2 tsp lemon juice or white wine vinegar</li>
+                    <li>Stir well</li>
+                    <li>Season with salt and pepper to taste</li>
+                    <li>Adjust horseradish and acid to your preference (more = spicier/tangier)</li>
+                    <li>Chill until serving</li>
+                </ol>
+            </div>
+        </div>
+
+        <!-- SIDES TAB -->
+        <div id="sides" class="tab-content">
+            <div class="card">
+                <h3>Garlic Mashed Potatoes (serves 8)</h3>
+
+                <h4 style="margin-top: var(--space-20); color: var(--color-primary);">Ingredients Checklist</h4>
+                <ul class="checklist">
+                    <li><input type="checkbox" id="pot1"><label for="pot1">1.8 kg Yukon Gold potatoes, peeled and chunked</label></li>
+                    <li><input type="checkbox" id="pot2"><label for="pot2">8-10 tbsp unsalted butter, room temp</label></li>
+                    <li><input type="checkbox" id="pot3"><label for="pot3">1 cup heavy cream, warmed</label></li>
+                    <li><input type="checkbox" id="pot4"><label for="pot4">6-8 cloves garlic, smashed</label></li>
+                    <li><input type="checkbox" id="pot5"><label for="pot5">¼ cup sour cream or crème fraîche</label></li>
+                    <li><input type="checkbox" id="pot6"><label for="pot6">2-2.5 tsp kosher salt</label></li>
+                    <li><input type="checkbox" id="pot7"><label for="pot7">½ tsp black pepper</label></li>
+                    <li><input type="checkbox" id="pot8"><label for="pot8">2-3 tbsp fresh chives (optional)</label></li>
+                </ul>
+
+                <h4 style="margin-top: var(--space-24); color: var(--color-primary);">Instructions</h4>
+                <ol style="padding-left: var(--space-20);">
+                    <li><strong>Boil:</strong> Bring a large pot of salted water to boil. Add potato chunks and cook until fork-tender, about 20-25 minutes. Drain well.</li>
+                    <li><strong>Warm cream & butter:</strong> Heat cream and garlic cloves together in a small saucepan over medium-low heat until steaming (don't boil). Let garlic infuse for 5-10 minutes. Remove from heat and let sit.</li>
+                    <li><strong>Mash:</strong> Return drained potatoes to pot. Add room-temperature butter and begin mashing with a ricer or masher until smooth.</li>
+                    <li><strong>Add cream:</strong> Slowly add the warm cream (with garlic cloves still in) while stirring gently. Fold in sour cream or crème fraîche.</li>
+                    <li><strong>Season:</strong> Add salt and pepper. Taste and adjust. Fold in fresh chives if using.</li>
+                    <li><strong>Serve:</strong> Transfer to serving bowl. Drizzle with extra melted butter if desired. Keep warm until service.</li>
+                </ol>
+
+                <div class="notes-section">
+                    <h4>🔥 Creamy Mash Tips</h4>
+                    <ul style="margin: 0; padding-left: var(--space-20);">
+                        <li>Use Yukon Golds—they're naturally buttery and waxy (don't turn gluey)</li>
+                        <li>Warm all dairy before mixing to avoid cooling the potatoes</li>
+                        <li>Don't overwork; fold gently to keep airy, not gluey</li>
+                        <li>Infuse the cream with garlic for deeper flavor without sharp bites</li>
+                        <li>Make ahead: Prepare early, reheat gently on stovetop with a splash more cream</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>Serving & Pairing Suggestions</h3>
+                <p><strong>Classic Steakhouse Combo:</strong></p>
+                <ul style="padding-left: var(--space-20);">
+                    <li>Prime rib sliced ½–¾ inch thick</li>
+                    <li>Garlic mashed potatoes</li>
+                    <li>Pan jus spooned over the meat</li>
+                    <li>Horseradish cream on the side</li>
+                    <li>Green salad with sharp vinaigrette (to cut richness)</li>
+                </ul>
+
+                <p style="margin-top: var(--space-20);"><strong>Optional Additions:</strong></p>
+                <ul style="padding-left: var(--space-20);">
+                    <li>Roasted Brussels sprouts with lemon</li>
+                    <li>Simple green vegetables (asparagus, broccoli)</li>
+                    <li>Crusty bread for soaking up jus</li>
+                    <li>Red wine pairing: Cabernet Sauvignon or Bordeaux blend</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>Prime Rib Dinner Cookbook | Makes 8 generous servings | Plan ahead, monitor temperature, enjoy!</p>
+    </div>
+
+    <script>
+        function switchTab(tabName) {
+            // Hide all tabs
+            const tabs = document.querySelectorAll('.tab-content');
+            tabs.forEach(tab => tab.classList.remove('active'));
+
+            // Remove active class from all buttons
+            const buttons = document.querySelectorAll('.tab-btn');
+            buttons.forEach(btn => btn.classList.remove('active'));
+
+            // Show selected tab
+            document.getElementById(tabName).classList.add('active');
+
+            // Add active class to clicked button
+            event.target.classList.add('active');
+        }
+
+        function toggleStrike(checkbox) {
+            const text = checkbox.nextElementSibling;
+            if (checkbox.checked) {
+                text.classList.add('checked');
+            } else {
+                text.classList.remove('checked');
+            }
+        }
+    </script>
+</body>
+</html>
