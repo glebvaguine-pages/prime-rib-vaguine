@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Prime Rib Dinner Cookbook – 5 PM Dinner</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #111;
+      color: #f5f5f5;
+    }
+    header {
+      background: #222;
+      padding: 1rem 1.5rem;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #333;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 1.3rem;
+    }
+    header .meta {
+      font-size: 0.85rem;
+      color: #ccc;
+    }
+    main {
+      padding: 1rem 1.5rem 3rem;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    h2 {
+      margin-top: 2rem;
+      font-size: 1.2rem;
+      border-bottom: 1px solid #333;
+      padding-bottom: 0.25rem;
+    }
+    h3 {
+      margin-top: 1.2rem;
+      font-size: 1.05rem;
+    }
+    .section {
+      margin-top: 1rem;
+      padding: 0.75rem 1rem;
+      background: #181818;
+      border-radius: 8px;
+      border: 1px solid #2a2a2a;
+    }
+    .pill {
+      display: inline-block;
+      padding: 0.2rem 0.5rem;
+      border-radius: 999px;
+      border: 1px solid #555;
+      font-size: 0.75rem;
+      margin-right: 0.4rem;
+      color: #ddd;
+    }
+    .highlight {
+      color: #ffd166;
+    }
+    details {
+      margin-top: 0.5rem;
+    }
+    summary {
+      cursor: pointer;
+      font-weight: 600;
+    }
+    ul, ol {
+      margin: 0.4rem 0 0.2rem 1.2rem;
+      padding: 0;
+    }
+    li {
+      margin-bottom: 0.25rem;
+    }
+    .checklist-item {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      cursor: pointer;
+    }
+    .checklist-item input[type="checkbox"] {
+      width: 1rem;
+      height: 1rem;
+    }
+    .timeline-item {
+      padding: 0.5rem 0.75rem;
+      border-radius: 6px;
+      border: 1px solid #333;
+      margin-bottom: 0.4rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.15rem;
+    }
+    .timeline-time {
+      font-size: 0.85rem;
+      color: #bbb;
+    }
+    .timeline-title {
+      font-weight: 600;
+    }
+    .badge {
+      display: inline-block;
+      font-size: 0.7rem;
+      padding: 0.1rem 0.4rem;
+      border-radius: 999px;
+      background: #333;
+      color: #eee;
+      margin-left: 0.3rem;
+    }
+    .note {
+      font-size: 0.85rem;
+      color: #ccc;
+      margin-top: 0.25rem;
+    }
+    .two-column {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1rem;
+    }
+    .tag {
+      display: inline-block;
+      font-size: 0.7rem;
+      border-radius: 4px;
+      padding: 0.1rem 0.3rem;
+      background: #333;
+      color: #eee;
+      margin-left: 0.3rem;
+    }
+    .clock {
+      font-size: 0.85rem;
+      color: #ddd;
+    }
+    .nav-buttons {
+      margin-top: 0.5rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+    }
+    .nav-buttons button {
+      padding: 0.3rem 0.6rem;
+      border-radius: 999px;
+      border: 1px solid #444;
+      background: #181818;
+      color: #eee;
+      cursor: pointer;
+      font-size: 0.75rem;
+    }
+    .nav-buttons button:hover {
+      background: #333;
+    }
+    .section-anchor {
+      scroll-margin-top: 70px;
+    }
+    @media (max-width: 600px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.3rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div>
+      <h1>Prime Rib Dinner – 5:00 PM Serve</h1>
+      <div class="meta">
+        4.44 kg bone-in standing rib roast · 8 guests · Reverse sear
+      </div>
+      <div class="nav-buttons">
+        <button onclick="scrollToSection('overview')">Overview</button>
+        <button onclick="scrollToSection('ingredients')">Ingredients</button>
+        <button onclick="scrollToSection('timeline')">Timeline</button>
+        <button onclick="scrollToSection('prime-rib')">Prime Rib</button>
+        <button onclick="scrollToSection('garlic-mash')">Garlic Mash</button>
+        <button onclick="scrollToSection('sauces')">Jus & Horseradish</button>
+      </div>
+    </div>
+    <div class="clock" id="clock">Current time: --:--</div>
+  </header>
+
+  <main>
+    <!-- OVERVIEW -->
+    <section id="overview" class="section section-anchor">
+      <h2>Overview</h2>
+      <p>
+        This app walks you through a <strong>4.44 kg</strong> bone-in standing rib roast with garlic mashed potatoes, pan jus, and horseradish cream for an on-time <span class="highlight">5:00 PM dinner</span> with guests arriving around <span class="highlight">4:00–4:30 PM</span>. [web:27][web:30][page:1]
+      </p>
+      <div class="two-column">
+        <div>
+          <h3>Specs</h3>
+          <ul>
+            <li>Meat: 4.44 kg bone-in standing rib roast (prime rib). [web:27]</li>
+            <li>Portions: ~8 generous servings plus leftovers. [web:27][web:30]</li>
+            <li>Method: Low-and-slow to 118°F / 47°C, long rest, then hot reverse sear at 500°F / 260°C. [page:1]</li>
+            <li>Target doneness: Medium-rare center, warmer edges. [page:1]</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Equipment</h3>
+          <ul>
+            <li>Large roasting pan or deep sheet tray.</li>
+            <li>Wire rack (optional if using bones + herb bed). [page:1]</li>
+            <li>Probe or instant-read thermometer (non-negotiable). [page:1]</li>
+            <li>Stovetop-safe pan for jus.</li>
+            <li>Large pot and masher/ricer for potatoes. [web:15]</li>
+          </ul>
+        </div>
+      </div>
+      <p class="note">
+        Heavy lifting is done the day before and early afternoon; from about 4 PM you are mostly finishing crust, carving, and plating. [page:1]
+      </p>
+    </section>
+
+    <!-- INGREDIENTS -->
+    <section id="ingredients" class="section section-anchor">
+      <h2>Ingredients (for 8)</h2>
+      <details open>
+        <summary>Prime Rib Roast</summary>
+        <div>
+          <div class="checklist-item">
+            <input type="checkbox" /> <span>4.44 kg bone-in standing rib roast (3–4 ribs). [web:27][web:30]</span>
+          </div>
+          <div class="checklist-item">
+            <input type="checkbox" /> <span>~20 g salt total (about ¾ tsp per 450 g), use flaky sea salt by feel for full coverage. [page:1][web:25]</span>
+          </div>
+          <div class="checklist-item">
+            <input type="checkbox" /> <span>Freshly ground black pepper (2–3 tsp). [web:1]</span>
+          </div>
+          <div class="checklist-item">
+            <input type="checkbox" /> <span>2 sprigs fresh rosemary (leaves only), finely chopped (plus extra sprigs for herb bed). [page:1]</span>
+          </div>
+          <div class="checklist-item">
+            <input type="checkbox" /> <span>Fresh thyme bunch (for herb bed). [page:1]</span>
+          </div>
+          <div class="checklist-item">
+            <input type="checkbox" /> <span>3 large cloves garlic, finely chopped (for mustard rub). [page:1]</span>
+          </div>
+          <div class="checklist-item">
+            <input type="checkbox" /> <span>2 whole garlic bulbs, halved (for herb bed). [page:1]</span>
+          </div>
+          <div class="checklist-item">
+            <input type="checkbox" /> <span>5 bay leaves. [page:1]</span>
+          </div>
+          <div class="checklist-item">
+            <input type="checkbox" /> <span>Peel from 1 lemon (2 big strips). [page:1]</span>
+          </div>
+          <div class="checklist-item">
+            <input type="checkbox" /> <span>1 tbsp whole grain mustard (for rub). [page:1]</span>
+          </div>
+          <div class="checklist-item">
+            <input type="checkbox" /> <span>4 tbsp (60 ml) olive oil (for rub + herb bed). [page:1]</span>
+          </div>
+        </div>
+      </details>
+
+      <details>
+        <summary>Garlic Mashed Potatoes</summary>
+        <div>
+          <div class="checklist-item">
+            <input type="checkbox" /> <span>4 lb (≈1.8 kg) Yukon Gold potatoes, peeled and chunked. [web:15][web:21]</span>
+          </div>
+          <div class="checklist-item">
+            <input type="checkbox" /> <span>8–10 tbsp unsalted butter, room temperature. [web:15][web:20]</span>
+          </div>
+          <div class="checklist-item">
+            <input type="checkbox" /> <span>1 cup heavy cream or half-and-half, warmed. [web:16][web:21]</span>
+          </div>
+          <div class="checklist-item">
+            <input type="checkbox" /> <span>6–8 cloves garlic, smashed or minced, plus optional 1 head roasted garlic. [web:21]</span>
+          </div>
+          <div class="checklist-item">
+            <input type="checkbox" /> <span>¼ cup sour cream or crème fraîche (optional, extra creaminess). [web:17][web:22]</span>
+          </div>
+          <div class="checklist-item">
+            <input type="checkbox" /> <span>Salt for water and seasoning (2–2½ tsp total), pepper to taste. [web:16][web:22]</span>
+          </div>
+          <div class="checklist-item">
+            <input type="checkbox" /> <span>Optional: 2–3 tbsp chopped chives, extra butter to finish. [web:17][web:15]</span>
+          </div>
+        </div>
+      </details>
+
+      <details>
+        <summary>Pan Jus</summary>
+        <div>
+          <div class="checklist-item">
+            <input type="checkbox" /> <span>Roasting pan drippings and browned bits. [web:1][web:4]</span>
+          </div>
+          <div class="checklist-item">
+            <input type="checkbox" /> <span>1 cup beef stock. [web:1][web:30]</span>
+          </div>
+          <div class="checklist-item">
+            <input type="checkbox" /> <span>Optional splash of red wine. [web:30]</span>
+          </div>
+          <div class="checklist-item">
+            <input type="checkbox" /> <span>Salt and pepper to taste. [web:1]</span>
+          </div>
+        </div>
+      </details>
+
+      <details>
+        <summary>Horseradish Cream</summary>
+        <div>
+          <div class="checklist-item">
+            <input type="checkbox" /> <span>1 cup sour cream. [web:18]</span>
+          </div>
+          <div class="checklist-item">
+            <input type="checkbox" /> <span>3–4 tbsp prepared horseradish. [web:18]</span>
+          </div>
+          <div class="checklist-item">
+            <input type="checkbox" /> <span>1 tsp Dijon mustard. [web:18]</span>
+          </div>
+          <div class="checklist-item">
+            <input type="checkbox" /> <span>1–2 tsp lemon juice or white wine vinegar. [web:18]</span>
+          </div>
+          <div class="checklist-item">
+            <input type="checkbox" /> <span>Salt and pepper to taste. [web:18]</span>
+          </div>
+        </div>
+      </details>
+    </section>
+
+    <!-- TIMELINE -->
+    <section id="timeline" class="section section-anchor">
+      <h2>Timeline (5:00 PM Dinner)</h2>
+      <p>
+        This assumes dinner at <span class="highlight">5:00 PM</span>. Prime rib timing for 4.44 kg at 250°F / 120°C is roughly 3–4 hours to 118°F / 47°C plus rests. [page:1]
+      </p>
+
+      <h3>Day Before (Dry Brine + Pre-Prep)</h3>
+      <div class="timeline-item">
+        <div class="timeline-time">Anytime (preferably afternoon)</div>
+        <div class="timeline-title">Season and start dry brine <span class="badge">Prime Rib</span></div>
+        <div class="note">
+          Unwrap roast, pat dry, trim only hard surface fat. Season all over with ~20 g salt and pepper. Place on herb-free rack/tray, uncovered in fridge 24–36 hours. [page:1]
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-time">Evening</div>
+        <div class="timeline-title">Make horseradish cream (optional ahead) <span class="badge">Sauce</span></div>
+        <div class="note">
+          Mix sour cream, horseradish, Dijon, lemon juice, salt and pepper. Chill covered in fridge; flavors meld overnight. [web:18]
+        </div>
+      </div>
+
+      <h3>Day Of (Serve at 5:00 PM)</h3>
+
+      <div class="timeline-item">
+        <div class="timeline-time">12:00 PM</div>
+        <div class="timeline-title">Pull roast from fridge <span class="badge">Prime Rib</span></div>
+        <div class="note">
+          Let roast sit at room temp 2–3 hours to take the chill off. [page:1]
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-time">1:00 PM</div>
+        <div class="timeline-title">Prep herb bed & rub <span class="badge">Prime Rib</span></div>
+        <div class="note">
+          Layer rosemary, thyme, halved garlic bulbs, bay leaves, and lemon peel in roasting pan, drizzle with olive oil. Make garlic–rosemary–mustard–oil rub and set aside. [page:1]
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-time">1:15 PM</div>
+        <div class="timeline-title">Preheat oven & rub roast <span class="badge">Prime Rib</span></div>
+        <div class="note">
+          Preheat oven to 250°F / 120°C. Rub roast with the garlic–herb–mustard oil mix, set directly on herb bed (bones act as rack). Probe the thickest part. [page:1]
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-time">1:30 PM–4:00 PM</div>
+        <div class="timeline-title">Low-and-slow roast to 118°F / 47°C <span class="badge">Prime Rib</span></div>
+        <div class="note">
+          Roast at 250°F / 120°C until internal hits 118°F / 47°C (estimate 3–4 hours; check from 3-hour mark). Remove roast and tent loosely. [page:1]
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-time">While roast rests after low cook (target rest start ~3:45–4:00 PM)</div>
+        <div class="timeline-title">Turn oven up and start potatoes <span class="badge">Mash</span></div>
+        <div class="note">
+          Crank oven to 500°F / 260°C. Start potatoes around 3:45 PM so they can be mashed and held warm before final sear. [page:1][web:15]
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-time">3:45 PM</div>
+        <div class="timeline-title">Boil potatoes <span class="badge">Mash</span></div>
+        <div class="note">
+          Cook potatoes in salted water until very tender, 15–20 minutes; meanwhile warm cream and butter with garlic. [web:15][web:21]
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-time">4:15 PM</div>
+        <div class="timeline-title">Mash and finish potatoes <span class="badge">Mash</span></div>
+        <div class="note">
+          Drain, mash/ricer potatoes. Fold in warm garlic cream, butter, sour cream, salt, pepper. Hold covered over very low heat or in a warm oven. [web:15][web:16]
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-time">4:15–4:30 PM</div>
+        <div class="timeline-title">Guests arrive; roast resting <span class="badge">Hosting</span></div>
+        <div class="note">
+          Roast has rested 30–60 minutes already. Oven is at 500°F / 260°C, potatoes are done and holding, sauces ready or chilled. [page:1]
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-time">4:30–4:40 PM</div>
+        <div class="timeline-title">Final 10–15 min high-heat sear <span class="badge">Prime Rib</span></div>
+        <div class="note">
+          Put roast back into 500°F / 260°C oven for 10–15 minutes until dark, crispy crust develops. [page:1]
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-time">4:40–4:55 PM</div>
+        <div class="timeline-title">Rest, make jus, final touches <span class="badge">Finish</span></div>
+        <div class="note">
+          Rest roast 15 minutes while you make pan jus from drippings and adjust seasoning on mash and sauces. [web:1][web:30]
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-time">4:55–5:00 PM</div>
+        <div class="timeline-title">Carve and plate <span class="badge">Serve</span></div>
+        <div class="note">
+          Remove bones in one slab, slice roast into ½–¾ inch slices across the grain. Serve with garlic mash, jus, and horseradish cream. [page:1][web:21]
+        </div>
+      </div>
+    </section>
+
+    <!-- PRIME RIB STEPS -->
+    <section id="prime-rib" class="section section-anchor">
+      <h2>Prime Rib – Step-by-Step</h2>
+
+      <h3>Day Before – Dry Brine</h3>
+      <ol>
+        <li>Unwrap the 4.44 kg roast, pat very dry, and trim only the hard external fat; keep the soft fat cap. [page:1]</li>
+        <li>Season all over with ~20 g salt and black pepper. Go heavy; much falls off and bone weight dilutes saltiness. [page:1]</li>
+        <li>Set on a rack or tray, uncovered, in the fridge for 24–36 hours to dry brine. [page:1]</li>
+      </ol>
+
+      <h3>Day Of – Herb Bed and Rub</h3>
+      <ol>
+        <li>Remove roast around 12:00 PM to warm for 2–3 hours at room temp. [page:1]</li>
+        <li>In a roasting pan, layer rosemary, thyme, halved garlic bulbs, bay leaves, and lemon peel, drizzle with olive oil. [page:1]</li>
+        <li>Mix rub: finely chop 2 sprigs worth of rosemary leaves and 3 large garlic cloves; stir with 1 tbsp whole grain mustard and 4 tbsp olive oil. [page:1]</li>
+        <li>Preheat oven to 250°F / 120°C. Set roast bone-side down on the herb bed. Rub all surfaces with the garlic–herb–mustard oil. [page:1]</li>
+        <li>Insert thermometer into thickest center, avoiding bone. [page:1]</li>
+      </ol>
+
+      <h3>Low Roast and Reverse Sear</h3>
+      <ol>
+        <li>Roast at 250°F / 120°C until internal temp hits 118°F / 47°C for medium-rare. Expect about 3–4 hours for 4.44 kg; start checking at 3 hours. [page:1]</li>
+        <li>Remove roast and tent loosely with foil. Let rest at least 30 minutes and up to 1.5 hours. [page:1]</li>
+        <li>Increase oven to 500°F / 260°C while the roast rests. [page:1]</li>
+        <li>Just before serving window, return roast to the hot oven for 10–15 minutes to develop a deep brown crust. [page:1]</li>
+        <li>Rest another 15–20 minutes before carving to let juices redistribute. [page:1]</li>
+      </ol>
+
+      <h3>Carving</h3>
+      <ol>
+        <li>Stand roast up and slice along the bones to remove them as a slab. [page:1]</li>
+        <li>Turn roast on its side and slice ½–¾ inch slices across the grain. [page:1]</li>
+        <li>Serve slices with a little fat cap intact, plus jus and horseradish cream on the side. [web:1][web:18]</li>
+      </ol>
+    </section>
+
+    <!-- GARLIC MASH -->
+    <section id="garlic-mash" class="section section-anchor">
+      <h2>Garlic Mashed Potatoes</h2>
+
+      <h3>Method</h3>
+      <ol>
+        <li>Peel and chunk 4 lb / 1.8 kg Yukon Gold potatoes into even pieces. [web:15][web:21]</li>
+        <li>Place in a pot with cold water and a generous pinch of salt; bring to a simmer and cook until very tender, 15–20 minutes. [web:15][web:21]</li>
+        <li>In a small pot, gently warm cream, butter, and 6–8 garlic cloves (smashed or minced) until steaming, not boiling. [web:16][web:21]</li>
+        <li>Drain potatoes well; let sit 1–2 minutes to steam off excess moisture. [web:15]</li>
+        <li>Pass through a ricer or mash until smooth, then fold in warm garlic cream, butter, and sour cream. Season with salt and pepper. [web:15][web:16]</li>
+        <li>Optional: Fold in roasted garlic cloves and chives, then hold warm (covered) on very low heat or in a 170–190°F / 75–90°C oven. [web:21][web:17]</li>
+      </ol>
+    </section>
+
+    <!-- SAUCES -->
+    <section id="sauces" class="section section-anchor">
+      <h2>Pan Jus & Horseradish Cream</h2>
+
+      <h3>Pan Jus</h3>
+      <ol>
+        <li>After removing roast for final rest, pour drippings into a fat separator or bowl; skim excess fat, leaving 2–3 tbsp in pan. [web:1][web:4]</li>
+        <li>Place pan over medium heat. Add 1 cup beef stock (and a splash of red wine if using), scraping browned bits. [web:1][web:30]</li>
+        <li>Simmer to reduce slightly, taste, adjust salt and pepper, then strain if you prefer a smooth jus. [web:1][web:30]</li>
+      </ol>
+
+      <h3>Horseradish Cream</h3>
+      <ol>
+        <li>Combine 1 cup sour cream, 3–4 tbsp prepared horseradish, 1 tsp Dijon, and 1–2 tsp lemon juice or vinegar. [web:18]</li>
+        <li>Season with salt and pepper; chill at least 30 minutes (or overnight from day before). [web:18]</li>
+        <li>Stir before serving; adjust heat with more horseradish if desired. [web:18]</li>
+      </ol>
+    </section>
+  </main>
+
+  <script>
+    function updateClock() {
+      const el = document.getElementById('clock');
+      const now = new Date();
+      const time = now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+      el.textContent = 'Current time: ' + time;
+    }
+    setInterval(updateClock, 1000);
+    updateClock();
+
+    function scrollToSection(id) {
+      const el = document.getElementById(id);
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  </script>
+</body>
+</html>
